@@ -1,0 +1,12 @@
+django==1.11
+django-constance[database]==2.1.0
+django-post-office==3.0.4
+geocoder==1.36.0
+fabric3==1.14.post1
+django-autoslug-iplweb==1.9.4.dev0
+django-compressor==2.2
+Pillow==5.0.0
+unidecode==1.0.22
+django-import-export==1.0.0
+django-admin-tools==0.8.1
+django-colorfield==0.1.14

@@ -1,0 +1,40 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+p, div {
+  font-family: roboto;
+}
+h1, h2, h3, h4 {
+  font-family: roboto_bold;
+}
+a, span {
+  font-family: roboto_light;
+}
+input {
+  border-radius: 4px;
+  border: 1px solid #cecdcd;
+}
+input[type=submit]{
+  text-align: right;
+}
+label {
+  font-family: roboto_light;
+  margin-right: 10px;
+}
+
+.empty-link {
+  color: white;
+  text-decoration: none;
+}
+.empty-link:hover {
+  color: white;
+  text-decoration: none;
+}
+ul.errorlist {
+    list-style: none;
+    color: red;
+}
+.helptext {
+  display: none;
+}

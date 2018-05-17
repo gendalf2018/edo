@@ -1,0 +1,24 @@
+<!-- Modal -->
+<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Добавить пользователя</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {% for p in users %}
+          <span style="display: inline-block; width:10px;height:10px; border-radius: 5px; background: {{ p.color }}"></span>{{ p.email }}
+          <span>{{ p.first_name }}</span>
+          <span>{{ p.last_name }}</span>
+        {% endfor %}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+        <button type="button" class="btn btn-primary">Добавить</button>
+      </div>
+    </div>
+  </div>
+</div>

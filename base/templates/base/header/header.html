@@ -1,0 +1,27 @@
+<div class="logo">
+  <a class="empty-link" href="/"><h1>ED</h1></a>
+</div>
+<div class="description">
+    <span>система электронного документооборота</span>
+</div>
+<div class="tools">
+  <div class="userinfo">
+    {% if user.is_authenticated %}
+      <span>Здравствуйте,</span> {% if user.first_name %}
+        {{ user.first_name }}
+        {{ user.father_name }}
+        {{ user.last_name }}
+        {% endif %}
+        <div class="login-btn">
+          <a href="{% url "logout" %}" class="btn btn-secondary">Выйти</a>
+        </div>
+    {% else %}
+      <div class="login-btn"></div>
+        <a href="{% url "login" %}" class="btn btn-primary">Вход\Регистрация</a>
+      </div>
+    {% endif %}
+
+  </div>
+
+
+</div>

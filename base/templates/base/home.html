@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+  {% if not user.is_authenticated %}
+    {% block authorize %}
+    {% endblock %}
+  {% elif not user.is_active %}
+      {% block mail_confirm %}
+      {% endblock %}
+  {% else %}
+      {% block main_content %}
+        <section class="home">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="menu-btn btn-primary">
+                    <a href="" class="btn-primary">Сотрудники</a>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="menu-btn btn-primary">
+                  <a href="{% url 'doclist' %}" class="btn-primary">Документы</a>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+
+                <div class="col-sm-6">
+                  <div class="menu-btn btn-primary">
+                  <a href="" class="btn-primary">Профиль</a>
+                </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="menu-btn btn-primary">
+                  <a href="" class="btn-primary">Настройки</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </section>
+      {% endblock %}
+  {% endif %}
+{% endblock %}

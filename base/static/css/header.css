@@ -1,0 +1,26 @@
+.header {
+  min-height: 100px;
+  height: 10%;
+  background: #445669;
+  color: #fff;
+  padding: .8rem;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  flex: 1 1 auto;
+  max-width: 100px;
+}
+.logo h1 {
+  margin: 0;
+}
+.description {
+  flex: 1 1 auto;
+  padding-left: .8rem;
+}
+.userinfo {
+  flex: 1 1 auto;
+}
+.login-btn {
+  text-align: right;
+}

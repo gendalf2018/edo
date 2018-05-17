@@ -1,0 +1,172 @@
+span, h1, h2, h3, h4, h5, h6, div, p, table, td, tr {
+  word-wrap: break-word;
+  font-family: inherit;
+}
+
+#A {
+  display: none;
+  z-index: 1;
+}
+#A section {
+  margin-bottom: 10px;
+}
+#A section p {
+  min-height: 1rem;
+}
+.doc-toolbar {
+  width: 100%;
+  margin-bottom: 7px;
+}
+.page-editor {
+  min-height: calc( 100% - 150px);
+}
+#textBox {
+  min-height: 1000px;
+  width: 700px;
+  background: whitesmoke;
+  overflow: hidden;
+  display: none;
+  word-wrap: break-word;
+}
+.docform {
+  background: #f5f5f5;
+}
+.doc-tools {
+  background: #f5f5f5;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  padding: 7px;
+  z-index: 10;
+}
+.doc-name {
+  margin:1rem;
+}
+/* doclist */
+.doclist {
+  min-height: calc( 100% - 150px);
+}
+.doclist-header {
+  text-align: center;
+  width: 100%;
+  font-size: 1.4rem;
+  margin: 1rem;
+}
+.docs-subheader {
+  font-size: 1.2rem;
+  font-family: 'roboto_light';
+  color: #445669;
+}
+.row {
+  margin-bottom: 1rem;
+}
+.card {
+  min-height: 7.8rem;
+}
+.card .card-body {
+    padding: .25rem 1rem;
+}
+.card .card-header {
+  min-height: 6.1rem;
+}
+.docs-toolbar {
+  text-align: right;
+}
+/* history */
+.history-added {
+  border-style: solid!important;
+  border-width: 2px!important;
+  border-radius: 3px;
+}
+.history-removed {
+  display: inline!important;
+}
+.history-removed i {
+  display: inline!important;
+}
+.alert {
+  position: fixed;
+  right: 1rem;
+  top: 10rem;
+  z-index: 200;
+  display: none;
+}
+.user-info {
+  flex: 1 1 auto;
+  padding: .5rem;
+  min-width: 250px;
+}
+.constructor {
+  flex: 1 1 auto;
+  padding: .5rem;
+}
+.editor-main {
+  margin-top: 106px;
+  display: flex;
+}
+.aside-block {
+  margin-bottom: 5px;
+}
+.history {
+  border: 1px solid #d8d8d8;
+  padding: 5px;
+  display: flex;
+  margin-bottom: 5px;
+}
+.history-color {
+  min-width: 5px;
+}
+.history-info {
+  padding: 0 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.history__item {
+  margin: 0;
+}
+.history-date {
+  color: grey;
+  font-size: .8rem;
+}
+.docusers-block {
+  padding: 5px;
+  background: #efefef;
+}
+.docuser {
+  background: white;
+  padding: 3px;
+}
+.docuser-info__item {
+  margin: 0;
+}
+.docuser-info {
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+}
+.docuser-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.docgroup p{
+  background:white;
+  display: inline-block;
+  padding: 1px 3px 1px 3px;
+}
+.docgroup p span {
+  color: red;
+  cursor: pointer;
+}
+#addGroup{
+  cursor: pointer;
+}
+#addUser {
+  cursor: pointer;
+}

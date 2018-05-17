@@ -1,0 +1,17 @@
+<div class="aside-block docusers-block">
+  <p>Пользователи, привязанные к документу:</p>
+  <button type="button" data-toggle="modal" data-target="#addUserModal" id="addUser" style="display: block; color:green;"><i class="fas fa-plus"></i> Добавить</button>
+  <hr/>
+
+  {% for u in doc.user.all %}
+  <div class="docuser">
+    <div class="docuser-info">
+      <p class="docuser-info__item docuser-color" style="background-color: {{ u.color }};"></p>
+      <p class="docuser-info__item docuser-email">{{ u.email }}</p>
+    </div>
+    {% if u.last_name and u.first_name %}
+      <p class="docuser-info__item docuser-name">{{ u.first_name }} {{ u.last_name }}</p>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>

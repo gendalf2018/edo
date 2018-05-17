@@ -1,0 +1,31 @@
+
+.authorization{
+}
+
+.form-block {
+  padding: 10px;
+}
+.form-block form p {
+  display: flex;
+  justify-content: flex-end;
+}
+.form-block h2 {
+  text-align: center;
+}
+.home {
+  height: calc( 100% - 150px )
+}
+.main-menu {
+  margin: 20px 0 0 0;
+  list-style: none;
+}
+.main-menu li {
+  margin: 0 0 1rem 0;
+}
+.menu-btn{
+  margin-top: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  height: 4rem;
+  line-height: 4rem;
+}

@@ -1,0 +1,14 @@
+<div class="aside-block groups-block">
+  <div class="aside-block docusers-block">
+    <p>Группы, привязанные к документу:</p>
+    <button type="button" data-toggle="modal" data-target="#addGroupModal" id="addGroup" style="display: block; color:green;"><i class="fas fa-plus"></i> Добавить</button>
+    <hr/>
+    <div class="docgroup">
+
+    {% for g in doc.u_group.all %}
+      <p>{{ g.name }} <span gid="{{ g.pk }}" docid="{{ doc.pk }}" class="delete-group"><i class="fas fa-times"></i></span></p>
+    {% endfor %}
+    </div>
+  </div>
+
+</div>

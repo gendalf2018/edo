@@ -1,0 +1,68 @@
+{% extends 'base/home.html' %}
+{% load staticfiles %}
+{% block innerscripts %}
+  <script type="text/javascript" src="{% static "js/docs.js" %}"></script>
+{% endblock %}
+{% block innerstyles %}
+  <link rel="stylesheet" href="{% static "css/editor.css" %}">
+{% endblock %}
+{% block main_content %}
+    <section class="doclist">
+      <h1 class="doclist-header">Выберите файл для редактирования</h1>
+      <div class="docs-toolbar">
+        <a href="{% url 'editornewurl' %}" class="btn btn-outline-success">+ Новый документ</a>
+      </div>
+      <div class="row">
+        {% if not group_docs %}
+          <p>Нет доступных документов для вашей группы</p>
+        {% else %}
+        <h2 class='docs-subheader'>
+          Документы, доступные вашей группе:
+        </h2>
+          <div class="col-md-12">
+            {% for doc in group_docs %}
+            {% if forloop.first %}<div class="row">{% endif %}
+            <div class="col-sm-2">
+              <div class="card">
+                <div class="card-header">
+                  {{ doc.get_short_name }}
+                </div>
+                <div class="card-body">
+                  <a href="{% url 'editorurl' pk=doc.pk %}" class="card-link">Открыть</a>
+                </div>
+              </div>
+            </div>
+            {% if forloop.counter|divisibleby:6 %}</div><div class="row">{% endif %}
+            {% if forloop.last %}</div>{% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      <div class="row">
+        {% if not user_docs %}
+          <p>Нет доступных документов для пользователя с адресом {{ user.email }}</p>
+        {% else %}
+          <h2 class='docs-subheader'>
+            Документы, доступные вам:
+          </h2>
+          <div class="col-md-12">
+            {% for udoc in user_docs %}
+              {% if forloop.first %}<div class="row">{% endif %}
+              <div class="col-sm-2">
+                <div class="card">
+                  <div class="card-header">
+                    {{ udoc.get_short_name }}
+                  </div>
+                  <div class="card-body">
+                    <a href="{% url 'editorurl' pk=udoc.pk %}" class="card-link">Открыть</a>
+                  </div>
+                </div>
+              </div>
+              {% if forloop.counter|divisibleby:6 %}</div><div class="row">{% endif %}
+              {% if forloop.last %}</div>{% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </section>
+{% endblock %}

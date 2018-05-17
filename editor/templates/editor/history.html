@@ -1,0 +1,16 @@
+<div class="aside-block history-block">
+  <p>История изменений</p>
+  {% for hist in doc.dochistory_set.all %}
+    <div history-uid="{{ hist.user.pk }}" history-color="{{ hist.user.color }}" class="history">
+      <div class="history-color" style="background-color: {{ hist.user.color }}">
+      </div>
+      <div class="history-info">
+        {% if hist.user.first_name and hist.user.last_name %}
+        <p class="history__item history-name">{{ hist.user.first_name }} {{ hist_user.last_name }}</p>
+        {% endif %}
+        <p class="history__item history-email">{{ hist.user.email }}</p>
+        <p class="history__item history-date">{{ hist.date_added }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
